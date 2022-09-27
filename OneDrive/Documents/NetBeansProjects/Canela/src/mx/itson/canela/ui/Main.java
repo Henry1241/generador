@@ -59,14 +59,17 @@ public class Main {
         List<Paso> pasos = new ArrayList<>();
         
         Paso paso1 = new Paso();
+        paso1.setOrden(1);
         paso1.setDescripcion("Licúa la Leche Evaporada con el agua, el queso crema y la sal con cebolla en polvo; cocina lo que licuaste a fuego bajo por 15 minutos o hasta que espese ligeramente, mueve constantemente para evitar que se pegue; retira del fuego.");
         pasos.add(paso1);
         
         Paso paso2 = new Paso();
+        paso2.setOrden(2);
         paso2.setDescripcion("Sirve la pasta caliente, baña con la salsa de queso y espolvorea con perejil picado.");
         pasos.add(paso2);
         
         Paso paso3 = new Paso();
+        paso3.setOrden(3);
         paso3.setDescripcion("Ofrece");
         pasos.add(paso3);
         
