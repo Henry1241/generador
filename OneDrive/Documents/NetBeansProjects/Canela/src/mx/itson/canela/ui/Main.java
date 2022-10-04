@@ -56,8 +56,8 @@ public class Main {
         
         //Agregar pasos
         //Espero que lo hayan hecho
-        List<Paso> pasos = new ArrayList<>();
-        
+        List<Paso> pasos = new ArrayList<Paso>();
+      
         Paso paso1 = new Paso();
         paso1.setOrden(1);
         paso1.setDescripcion("Licúa la Leche Evaporada con el agua, el queso crema y la sal con cebolla en polvo; cocina lo que licuaste a fuego bajo por 15 minutos o hasta que espese ligeramente, mueve constantemente para evitar que se pegue; retira del fuego.");
