@@ -18,6 +18,7 @@ public class Receta {
     private String descripcion;
     private int numeroPorciones;
     private int tiempo;
+    private Usuario usuario;
     private List<Ingrediente> ingredientes;
     private List<Paso> pasos;
     private Dificultad dificultad;
@@ -118,6 +119,20 @@ public class Receta {
      */
     public void setDificultad(Dificultad dificultad) {
         this.dificultad = dificultad;
+    }
+
+    /**
+     * @return the usuario
+     */
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    /**
+     * @param usuario the usuario to set
+     */
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
     
     

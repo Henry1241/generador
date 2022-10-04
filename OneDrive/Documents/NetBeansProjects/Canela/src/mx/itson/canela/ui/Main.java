@@ -10,6 +10,7 @@ import java.util.List;
 import mx.itson.canela.entidades.Ingrediente;
 import mx.itson.canela.entidades.Paso;
 import mx.itson.canela.entidades.Receta;
+import mx.itson.canela.entidades.Usuario;
 import mx.itson.canela.enumeradores.Dificultad;
 
 /**
@@ -21,12 +22,12 @@ public class Main {
     public static void main(String[] args) {
         
         Receta receta = new Receta();
-        receta.setNombre("Pasta al queso");
+        receta.setNombre("Pasta al queso");  
         receta.setDescripcion("Dale un toque cremoso a tus pastas con esta receta de PASTA al QUESO preparada con Leche Evaporada CARNATION® CLAVEL®.");
         receta.setNumeroPorciones(4);
         receta.setTiempo(35);
         
-        List<Ingrediente> ingredientes = new ArrayList<>();
+        List<Ingrediente> ingredientes = new ArrayList<Ingrediente>();
         
         Ingrediente ingrediente1 = new Ingrediente();
         ingrediente1.setNombre("1- 1 Taza de Agua");
@@ -77,7 +78,26 @@ public class Main {
         
         receta.setDificultad(Dificultad.FACIL);
         
+        Usuario usuario = new Usuario();
+        usuario.setNombre("Rodolfo");
+        usuario.setCorreoElectronico("rodolfoelreno@gmail.com");
+        usuario.setContraseña("hesoyam");
         
+        receta.setUsuario(usuario);
+        
+        System.out.println("*** RECETAS NESTLE ");
+        System.out.println("Subido por: " + receta.getUsuario().getNombre());
+        System.out.println(receta.getNombre());
+        System.out.println(receta.getDescripcion());
+        System.out.println("Porciones: " + receta.getNumeroPorciones());
+        System.out.println("Tiempo de preparacion: " + receta.getTiempo() + " Minutos");
+        for (Ingrediente i : receta.getIngrediente()){
+        System.out.println(".-" + i.getNombre());
+        }
+        for(Paso p : receta.getPasos()){
+            System.out.println(".-" + p.getOrden() + ".-" + p.getDescripcion());
+        }
+        System.out.println("Nivel de dificultad: " + receta.getNumeroPorciones());
     }
     
 }
